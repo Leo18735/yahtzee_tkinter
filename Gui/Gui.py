@@ -37,33 +37,11 @@ class Gui:
         self._buttons: dict[str, Union[Result, tk.Button]] = {}
         self._dice_buttons: list[tk.Button] = []
 
-        player = Player("Simon")
-
-        cache: dict[str, list[Result]] = {
-            "upper": [
-                One(player, 3),
-                Two(player, 6),
-                Three(player, 9),
-                Four(player, 12),
-                Five(player, 15),
-                Six(player, 18),
-                Bonus(player)
-            ], "lower": [
-                ThreeOfAKind(player),
-                FourOfAKind(player),
-                FullHouse(player),
-                SmallStraight(player),
-                LargeStraight(player),
-                Chance(player),
-                Yahtzee(player)
-            ]
-        }
-
-        player.set_results(cache)
 
         playerNames: list[Player] = [
-            player,
-            Player("Max")]
+            Player("P1"),
+            Player("P2")]
+
         self._game: Game = Game(playerNames)
 
         self._setup()

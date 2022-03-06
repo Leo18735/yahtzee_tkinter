@@ -3,8 +3,8 @@ from AllClasses.Dice import Dice
 import AllClasses.Player
 
 class Result(ABC):
-    def __init__(self, player, gathered: int = None):
-        self._points_gathered: int = -1 if not gathered else gathered
+    def __init__(self, player):
+        self._points_gathered: int = -1
         self._player: AllClasses.Player.Player = player
 
     @staticmethod

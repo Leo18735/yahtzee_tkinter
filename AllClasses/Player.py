@@ -46,9 +46,6 @@ class Player:
             ]
         }
 
-    def set_results(self, results):
-        self._results = results
-
     def get_results(self) -> list[Result]:
         cache: list = []
         for value in self._results.values():
